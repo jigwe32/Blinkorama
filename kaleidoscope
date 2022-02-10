@@ -1,0 +1,32 @@
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (Math.randomRange(0, 10) < 5) {
+        light.setAll(0xff0000)
+    } else if (Math.randomRange(0, 10) > 5) {
+        light.showAnimation(light.rainbowAnimation, 2000)
+    } else {
+        light.setAll(0xffff00)
+    }
+})
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    light.showRing(
+        `black black black black black black black black green black`
+    )
+})
+input.buttonB.onEvent(ButtonEvent.LongClick, function () {
+    light.showRing(
+        `black pink black pink black black pink black pink black`
+    )
+})
+input.buttonB.onEvent(ButtonEvent.Up, function () {
+    light.showRing(
+        `yellow black yellow black yellow yellow black yellow black yellow`
+    )
+})
+input.buttonB.onEvent(ButtonEvent.Down, function () {
+    light.showRing(
+        `black black blue black black black black blue black black`
+    )
+})
+forever(function () {
+
+})
