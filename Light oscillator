@@ -1,0 +1,13 @@
+input.onLightConditionChanged(LightCondition.Bright, function () {
+    for (let i = 0; i < 100; i++) {
+        light.showAnimation(light.rainbowAnimation, 1000)
+    }
+})
+input.onLightConditionChanged(LightCondition.Dark, function () {
+    for (let i = 0; i < 100; i++) {
+        light.showAnimation(light.colorWipeAnimation, 100)
+    }
+})
+forever(function () {
+    music.ringTone(300 + input.lightLevel() * 5)
+})
